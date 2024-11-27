@@ -2,12 +2,12 @@
 
 <form action="{{ route('avaliacao.store') }}" method="POST">
     @csrf <!-- Token de segurança obrigatório para requisições POST -->
-    
-    
+
+
     <select class="form-control" id="banheiro_id" name="banheiro_id" required>
                     <option value="">Selecione um banheiro</option>
                     @foreach($banheiros as $banheiro)
-                        <option value="{{ $banheiro->id }}">{{ $banheiro->name }}</option>
+                        <option value="{{ $banheiro->id }}" selected="{{ $banheiro->id }}">{{ $banheiro->name }}</option>
                     @endforeach
                 </select>
                 <div>
